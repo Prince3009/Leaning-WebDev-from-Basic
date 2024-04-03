@@ -1,0 +1,7 @@
+1. we can directly use ctrl+enter to enter into new line without using mouse
+
+2. pressing the Alt key allows you to add multiple cursors at different positions in the editor simultaneously. This feature is called "Multi-Cursor Editing."
+
+3. use command palette and then search toggle word wrap to toggle word wrapping in the editor
+
+4. 
