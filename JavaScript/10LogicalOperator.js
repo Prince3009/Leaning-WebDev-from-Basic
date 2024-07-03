@@ -16,6 +16,6 @@ console.log(firstName && nickName); // false because nickName is empty string
 
 console.log(firstName || nickName); // true because firstName is not empty string
 
-//If both values are falsey values in OR operation then it will return last falsey value
+//If both values are falsey values in OR operation then it will return last falsey value or first truthy values
 
 //And in AND operation it will return first falsey value or last truthy value
