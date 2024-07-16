@@ -114,9 +114,10 @@ let countVowels = 0;
 for(let i = 0; i < string.length; i++){
     if(vowels.includes(string[i])){
         console.log(`${string[i]} is a vowel`);
+        countVowels++;
     }
     else{
         console.log(`${string[i]} is not a vowel`);
     }
 }
-
+console.log(countVowels);
