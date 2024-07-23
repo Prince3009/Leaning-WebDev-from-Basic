@@ -109,4 +109,66 @@ console.log(coloursList);
 
 //adding elements
 coloursList.splice(3, 0, "indigo", "saffron");       //it adds elements from index 3
-console.log(coloursList); 
+console.log(coloursList);
+
+
+
+
+//2.6 includes method - it checks if the array includes the given element
+
+let fruits = ["apple", "orange", "mango", "banana", "grapes"];
+
+console.log(fruits.includes("banana"));               //it checks if the array includes the given element
+console.log(fruits.includes("kiwi"));                 //it will return false as the array does not include kiwi
+
+
+//Exercise
+/*
+let availableSizes = ["XS", "S", "M", "L", "2XL", "3XL"];
+
+const readLineSync = require('readline-sync');
+const isAvailable = readLineSync.question("Check your available sizes(XS, S, M, L, 2XL, 3XL)");
+
+if(availableSizes.includes(isAvailable)){
+    console.log("Size is available");
+}
+else{
+    console.log("Size is not available");
+}
+*/
+
+
+//2.7 sort method
+
+let numbers5 = [5, 2, -9, 1, 7, 3, 11];
+
+numbers5.sort((a,b) => a-b);       //we have to use this to sort the array in ascending order otherwise it will print 11 after 1
+console.log(numbers5);
+
+numbers5.sort((a,b) => b-a);       //to sort the array in descending order
+console.log(numbers5);
+
+let  fruits2 = ["orange", "banana", "apple", "berries", "watermelon"];
+console.log(fruits2.sort());
+
+
+
+
+//2.8 split and join methods - str.split() method is used to split the given string into an array of strings by separating it into substrings using a specified separator and arr.join() method is used to join the elements of an array into a string. The elements of the string will be separated by a specified separator and its default value is a comma(, ).
+
+//It can be used to in palindrome strings
+
+let palindromeString = "madam";
+
+let splitString = palindromeString.split("");               //split the string where there are no spaces and make it to a array
+splitString.reverse;                                        //reverse the array
+
+let joinedString = splitString.join("");                    //join the array where there are no spaces and make it to a string
+console.log(joinedString);
+
+if(palindromeString === joinedString){
+    console.log("Given string is palindrome string");
+}
+else{
+    console.log("Given string is not palindrome string");
+}
