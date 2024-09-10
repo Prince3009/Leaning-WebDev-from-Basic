@@ -172,3 +172,60 @@ if(palindromeString === joinedString){
 else{
     console.log("Given string is not palindrome string");
 }
+
+
+
+
+/*
+Spread operator in an array 
+Syntax:
+var variablename1 = [...value]; 
+*/
+
+let numbers6 = [1, 2, 3, 4, 5];
+let numbers7 = [6, 7, 8, 9, 10];
+
+let combinedNumbers = [...numbers6, ...numbers7];     //using spread operator to merge two arrays
+console.log(combinedNumbers);                         //Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+
+//Adding Elements While Merging
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [8, 9];
+let combinedArr = [...arr1, 6, 7, ...arr2, 10, 11];
+console.log(combinedArr);                           // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+
+
+
+// Preventing Mutation
+let numbers8 = [1, 2, 3, 4, 5];
+
+let newNumbers8 = [...numbers8];       //using spread operator to create a new array without mutating the original array
+newNumbers8.push(6);
+console.log(newNumbers8);                     // Output: [1, 2, 3, 4, 5]
+
+
+
+//Destructuring array - Destructuring is a JavaScript expression that allows you to unpack values from arrays or objects into distinct variables.
+let x, y;
+[x, y] = [10, 20];
+console.log(x);          // 10
+console.log(y);          // 20
+
+
+
+let restof;
+[x, y, ...restof] = [10, 20, 30, 40, 50];
+console.log(x);               // 10
+console.log(y);               // 20
+console.log(restof);          // [30, 40, 50]
+
+
+
+
+
+
+
+
