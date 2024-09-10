@@ -221,11 +221,3 @@ let restof;
 console.log(x);               // 10
 console.log(y);               // 20
 console.log(restof);          // [30, 40, 50]
-
-
-
-
-
-
-
-
