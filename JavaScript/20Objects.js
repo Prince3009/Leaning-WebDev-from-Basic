@@ -41,26 +41,26 @@ person2.bye();                //calls the function that is a property of the obj
 
 
 
-//Adding properties to the object
-//Computed properties
-const readLineSync = require('readline-sync');
-const question = readLineSync.question("What do you want to ask(name/age/city/country)");
+//Adding properties to the object - Computed properties
 let person3 = {
     name : "Ravi",
     age : 30
 }
+
+const readLineSync = require('readline-sync');
+const question = readLineSync.question("What do you want to ask(name/age/city/country)");
 
 person3.city = "New York";       //adding a new property to the object
 person3.country = "USA";       
 
 console.log(person3);
 
-console.log(person3[question]);     //Computed property usage
+console.log(person3[question]);     //Computed property usage - adding new property to the person3 object using [] notation
 
 
 
 
-//Shorthand properties
+//Shorthand properties(optional)
 function personObj(name, city, country){
     return{
         name,
@@ -84,14 +84,15 @@ console.log("name" in obj2);
 
 console.log("state" in obj2);   //returns false because 'state' is not a property of obj2
 
+
 //for in
 for(let item in obj2){
     console.log(item);                //Output: name age
 }
 
 for(let key in obj2){
-    console.log(key, obj2[key]);           //Output: name Prince
-                                           //         age 20
+    console.log(key, obj2[key]);           /* Output: name Prince
+                                                      age 20       */
     
 }
 
@@ -129,3 +130,42 @@ obj5.address.street = "BB";
 obj5.address.city = "Bhagalpur";
 
 console.log("Updated obj3:", obj3);          //here the street and city of obj3 will also get changed but we  change it in the nested object i.e., nested objects gets affects by Object.assign method
+
+
+
+
+
+//Optional chaining(for nested objects)
+let obj6 = {
+    name : "Prince",
+    age: 20,
+    address: {
+        street: "123 Main St",
+        city: "New York",
+        country: {
+            name: "USA"
+        }
+    },
+    getDisplayMessage: function() {
+        console.log("Welcome Prince");
+    }   
+    
+}
+
+console.log(obj6.address.country.name);      //Output: USA and it will check till the country
+
+console.log(obj6.address?.name);               //Output:undefined and it will check till address only
+                                               //obj6.address?.name will be undefined because it is not a property of obj6.address
+                                               //if we don't use ? then it will show error in the output
+
+//Also works in functions
+obj6.getDisplayMessage();                  //Output: Welcome Prince
+
+obj6.getDisplayUser?.();                  //Here it will check for the property first that it exists or not
+                                          //Output: undefined and it will not call getDisplayUser function because it is not a property of obj6
+
+
+
+
+
+
