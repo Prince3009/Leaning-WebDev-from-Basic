@@ -42,20 +42,20 @@ person2.bye();                //calls the function that is a property of the obj
 
 
 //Adding properties to the object - Computed properties
-let person3 = {
-    name : "Ravi",
-    age : 30
-}
+// let person3 = {
+//     name : "Ravi",
+//     age : 30
+// }
 
-const readLineSync = require('readline-sync');
-const question = readLineSync.question("What do you want to ask(name/age/city/country)");
+// const readLineSync = require('readline-sync');
+// const question = readLineSync.question("What do you want to ask(name/age/city/country)");
 
-person3.city = "New York";       //adding a new property to the object
-person3.country = "USA";       
+// person3.city = "New York";       //adding a new property to the object
+// person3.country = "USA";       
 
-console.log(person3);
+// console.log(person3);
 
-console.log(person3[question]);     //Computed property usage - adding new property to the person3 object using [] notation
+// console.log(person3[question]);     //Computed property usage - adding new property to the person3 object using [] notation
 
 
 
@@ -168,4 +168,45 @@ obj6.getDisplayUser?.();                  //Here it will check for the property 
 
 
 
+//Destructuring Object - unpacking of values from arrays or properties from objects into distinct variables
+const obj7 = {
+    name: 'Prakash',
+    address: {
+        street: '123 Main St',
+        city: 'Mumbai',
+        state: 'Maharashtra'
+    },
+    courses: ['JavaScript', 'React', 'Node.js']
+};
 
+const{name, address, courses} = obj7;
+console.log(name);                        //Output: Prakash
+console.log(address);             //Output: { street: '123 Main St', city: 'Mumbai', state: 'Maharashtra' }
+console.log(courses);             //Output: [ 'JavaScript', 'React', 'Node.js' ]
+
+
+// Nested Destructuring
+const { address: { city, state } } = obj7;
+console.log(city); // Output: Mumbai
+console.log(state); // Output: Maharashtra
+
+
+//Renaming Variables
+const { name: userName, address: { city: userCity } } = obj7;
+console.log(userName); // Output: Prakash
+console.log(userCity); // Output: Mumbai
+
+
+//Using Rest Operator
+const obj8 = {
+    Name: 'Prakash',
+    address: {
+        street: '123 Main St',
+        city: 'Mumbai',
+        state: 'Maharashtra'
+    }
+}
+const { Name, ...rest } = obj8;
+console.log(Name); // Output: Prakash
+console.log(rest); // Output: { address: { street: '123 Main St', city: 'Mumbai', state: 'Maharashtra' }, courses: ['JavaScript', 'React', 'Node.js'] }
+ 
