@@ -209,4 +209,79 @@ const obj8 = {
 const { Name, ...rest } = obj8;
 console.log(Name); // Output: Prakash
 console.log(rest); // Output: { address: { street: '123 Main St', city: 'Mumbai', state: 'Maharashtra' }, courses: ['JavaScript', 'React', 'Node.js'] }
- 
+
+
+
+
+
+
+//Object method - (key, value and entries)
+let obj9 = {
+    name : 'Prince',
+    age : 20, 
+    course : 'JavaScript'
+}
+
+//Object.entries
+let entries = Object.entries(obj9);
+
+console.log(entries);           // Output:[ [ 'name', 'Prince' ], [ 'age', 20 ], [ 'course', 'JavaScript' ] ]
+
+//Object.keys
+let keys = Object.keys(obj9);
+console.log(keys);              //Output: [ 'name', 'age', 'course' ]
+
+//Object.values
+let values = Object.values(obj9);
+console.log(values);            //Output: [ 'Prince', 20, 'JavaScript' ]
+
+
+
+//Constructor new - The new keyword is used to create an instance of a constructor function or class.
+//It creates a new object and assigns the prototype of the constructor to the new object.
+function Person(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+  
+  let p1 = new Person("John", 30);
+  console.log(p1);                         //Output: Person { name: 'John', age: 30 }
+
+  let p2 = new Person("Anny", 23)
+  console.log(p2);                         //Output: Person { name: 'Anny', age: 23 }
+  
+  
+  
+
+//Call, Apply and Bind methods
+//call - call is a method used to invoke a function with a specified this value and arguments passed individually
+  function greet() {
+
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+  }
+  let p3 = {
+    name: "John",
+    age: 30
+  }
+  greet.call(p3); // Output: Hello, my name is John and I am 30 years old
+
+
+//apply - apply is a method used to invoke a function with a specified this value and arguments passed as an array
+  function greet(age, city) {
+    console.log(`${this.name} is ${age} years old and lives in ${city}`);
+  }
+  let p4 = { name: 'John' };
+  greet.apply(p4, [30, 'New York']);         //Output: John is 30 years old and lives in New York
+
+
+//bind - bind is used to create a new function that, when called, has its this keyword set to the provided value. Unlike call or apply, bind does not invoke the function immediately.
+let p5 = { name: 'John' };
+let greet = function() {
+  console.log(`Hello, ${this.name}`);
+}.bind(p5);
+
+greet(); // Output: Hello, John
+
+  
+  
+
