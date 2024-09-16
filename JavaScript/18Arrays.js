@@ -221,3 +221,20 @@ let restof;
 console.log(x);               // 10
 console.log(y);               // 20
 console.log(restof);          // [30, 40, 50]
+
+
+
+
+
+
+//Question : Calculate square of numbers in an array inside function
+const arr = [1, 3, 5, 7, 9];
+
+function squareNumbers(arr){
+    for(let i = 0; i < arr.length; i++){
+        arr[i] = arr[i] ** 2;
+        // or arr[i] *= arr[i];
+    }
+    return arr;
+}
+console.log(squareNumbers(arr));
