@@ -117,3 +117,19 @@ console.log(cube(3));       // Output: 27
 
 
 //Note: Higher-order functions are a powerful concept in JavaScript, and they can greatly enhance the modularity, reusability, and maintainability of your code. They allow you to create more flexible, expressive, and maintainable functions.
+
+
+
+
+//Rest parameter - The rest parameter is very similar to arguments Objects but it has some subtle differences. 
+function calculateTotal(a,b,...arr){
+console.log(a);
+console.log(b);
+console.log(arr);
+}
+
+calculateTotal(2,3,4,5,7,8,9,11.16);         /* Output: 2
+                                                        3
+                                                        [ 4, 5, 7, 8, 9, 11.16 ]    */ 
+
+
