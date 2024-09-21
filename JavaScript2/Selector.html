@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <button id="btn-start" class="button start">Start</button>
+            <button id="btn-stop" class="button stop">Stop</button>
+            <button id="btn-reset" class="button reset">Reset</button>
+        </div>
+    </div>
+    <script>
+        let startBtn = document.getElementById("btn-start");    //This will select Start btn by its id
+        console.log(startBtn);
+        
+        let stopBtn = document.querySelector(".stop");           //This will select Stop btn by its id as well by its class 
+        console.log(stopBtn);                                    //(. means class and # means id)
+        
+        let resetBtn = document.querySelector("#btn-reset");      //This will select Reset btn by its id
+        console.log(resetBtn);
+        
+        let selectAllBtn = document.querySelectorAll("button");        //This will select all buttons by its class name button
+        console.log(selectAllBtn);
+        
+    </script>
+</body>
+</html>
