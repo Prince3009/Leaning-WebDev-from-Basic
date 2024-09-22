@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-red{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <button id="btn-start" class="button start">Start</button>
+            <button id="btn-stop" class="button stop">Stop</button>
+            <button id="btn-reset" class="button reset">Reset</button>
+            <button id="increase-count" class="button count">Increase Count</button>
+        </div>
+    </div>
+    <script>
+        /*
+        let startBtn = document.querySelector(".start");    //This will select Start btn by its id
+        startBtn.addEventListener("click",() => {
+            console.log("Clicked");                //When I click on the start button it will print clicked to the console
+            
+            startBtn.innerText = "Begin";         //When I click on the start button, the text inside it changes into begin
+        })
+        */
+
+        //For toggling start - When clicked on the start button it changes into beegin then again when Clicked then it changes into start
+        /* let startBtn = document.querySelector(".start"); 
+        startBtn.addEventListener("click",() => {
+            if(startBtn.innerText === "Start"){
+                startBtn.innerText = "Begin";
+            }
+            else{
+                startBtn.innerText = "Start";
+            }
+        });
+        */
+
+        //Increase count in every click to the console
+        /*
+        let countButton = document.querySelector(".count");
+        let count = 0;
+        countButton.addEventListener("click",() => {
+            count++;
+            console.log(count);                         
+        });
+        */
+
+        //chenge the colour of the button by adding classList into it
+        let stopBtn = document.querySelector(".stop");
+        stopBtn.addEventListener("click",() => {
+            //stopBtn.classList.add("btn-red");
+            stopBtn.classList.toggle("btn-red");           //for toggling
+            console.log("heyy");
+            
+        });
+    </script>
+</body>
+</html>
