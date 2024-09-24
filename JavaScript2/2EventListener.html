@@ -19,6 +19,10 @@
             <button id="btn-reset" class="button reset">Reset</button>
             <button id="increase-count" class="button count">Increase Count</button>
         </div>
+        <div>
+            <br>
+            <input class="input">
+        </div>
     </div>
     <script>
         /*
@@ -29,6 +33,7 @@
             startBtn.innerText = "Begin";         //When I click on the start button, the text inside it changes into begin
         })
         */
+
 
         //For toggling start - When clicked on the start button it changes into beegin then again when Clicked then it changes into start
         /* let startBtn = document.querySelector(".start"); 
@@ -42,6 +47,7 @@
         });
         */
 
+
         //Increase count in every click to the console
         /*
         let countButton = document.querySelector(".count");
@@ -52,14 +58,34 @@
         });
         */
 
-        //chenge the colour of the button by adding classList into it
+
+        //change the colour of the button by adding classList into it
+        /*
         let stopBtn = document.querySelector(".stop");
         stopBtn.addEventListener("click",() => {
             //stopBtn.classList.add("btn-red");
             stopBtn.classList.toggle("btn-red");           //for toggling
-            console.log("heyy");
-            
         });
+        */
+
+        /*
+        let input = document.querySelector(".input");
+        // input.addEventListener("change", () => {
+        //     console.log(input.value);
+        // });
+
+        // input.addEventListener("input", () => {
+        //     console.log(input.value);
+        // });
+
+        // input.addEventListener("keyup", () => {
+        //     console.log(input.value);
+        // });
+
+        // input.addEventListener("focus", (event) => {
+        //     console.log(input.value);
+        // });
+        */
     </script>
 </body>
 </html>
