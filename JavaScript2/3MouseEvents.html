@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="input">
+    <script>
+        let input = document.querySelector('input');
+        input.addEventListener("mousedown", (event)=>{
+            //console.log(event.button);
+
+            //This will give the x and y coordinates 
+            //In place of pageX we can also use clientX. The only difference is pageX work for the entire page and clientX works for the visible area
+            xcor = event.pageX; 
+            ycor = event.pageY;
+            let cors = `Cor X - ${xcor}, Cor Y - ${ycor}`;
+            console.log(cors);
+
+
+            
+        })
+    </script>
+</body>
+</html>

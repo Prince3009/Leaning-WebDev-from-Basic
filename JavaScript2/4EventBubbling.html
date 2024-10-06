@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            border: 2px solid red;
+        }
+        #form, #div, #p{
+            border: 2px solid black;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form id="form">Form
+        <div id="div">Div
+        <p id="p">Paragraph</p>
+    </div>
+    </form>
+    </div>
+    <script>
+        let form = document.querySelector('#form');
+        let div = document.querySelector('#div');
+        let p = document.querySelector('#p');
+
+        form.addEventListener('click', () => {
+            alert("Form tag");
+        }, true);                                  
+
+        //The keyword true is used to enable event capturing. When set to true, events are captured in a top-down manner, meaning that if you click on any of these tags, the event will first be captured by the <form> tag, then the <div> tag, and finally the <p> tag. This ensures that the event is handled in a structured order before the bubbling phase begins.
+
+
+        div.addEventListener('click', () => {
+            alert("Div tag");
+        }, true);
+
+
+        p.addEventListener('click', () => {
+            alert("Paragraph tag");
+        }, true);
+    </script>
+</body>
+</html>
