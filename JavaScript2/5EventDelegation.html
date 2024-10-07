@@ -1,0 +1,47 @@
+<!-- Event delegation is attaching one event listener to a parent element so it handles events from its child elements, reducing the need for multiple listeners. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-red{
+            background-color: red;
+            color: white;
+        }
+        .btn-blue{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button class="button red">Red</button>
+        <button class="button blue">Blue</button>
+        <button class="button yellow">Yellow</button>
+        <button class="button green">Green</button>
+        <button class="button orange">Orange</button>
+    </div>
+
+    <script>
+        let container = document.getElementById("container");
+        
+        container.addEventListener("click", (event) => {
+           // console.log(event.target.innerText);              //Logs the button's inner text to the console\
+           let btnText = event.target.innerText;
+           if(btnText == "Red"){
+            event.target.classList.toggle("btn-red");
+           }
+
+           if(btnText == "Blue"){
+            event.target.classList.toggle("btn-blue");
+           }
+
+           //Similarly we can make this for all buttons using single variable
+            
+        });
+    </script>
+</body>
+</html>
