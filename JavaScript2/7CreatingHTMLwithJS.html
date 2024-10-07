@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Cards</title>
+    <style>
+        .image{
+            width: 320px;
+            height: 300px;
+            object-fit: cover;
+            margin-left: 10px;
+        }
+
+        .card-container{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0px;
+        }
+        .card-container span{
+            position: absolute;
+            bottom: 0;
+            width: 320px;
+            margin-left: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            /* text-align: center; */
+        }
+    </style>
+</head>
+<body>
+    <div id="parent-container">
+        <div class="card-container">
+            <img src="globe.jpg" alt="Globe Image" class="image">
+            <span>The globe is a delicate balance of beauty, where countless lives and dreams are woven together</span>
+        </div>
+    </div>
+    <script>
+        let parentElement = document.getElementById('parent-container');
+
+        let cardContainer = document.createElement("div");
+        cardContainer.classList.add("card-container");
+
+        //creating card image element
+        let cardImage = document.createElement("img");                   //creating image element
+        cardImage.src = "globe.jpg";                                     //setting all three attributes
+        cardImage.classList.add("image");                                //setting the same style as pf the previous one
+        cardImage.alt = "Globe Image";
+
+        cardContainer.appendChild(cardImage);                            //since cardImage is inside cardContainer, so we have to add it
+
+        parentElement.appendChild(cardContainer);                        //since cardContainer is inside parentElement, so we have to add it
+
+
+        //creating card text element
+        let cardText = document.createElement("span");                   //creating span element
+        cardText.innerText = "The globe is a delicate balance of beauty, where countless lives and dreams are woven together";
+                                                                         //setting attribute
+        cardContainer.appendChild(cardText);
+
+        parentElement.appendChild(cardContainer);
+
+    </script>
+</body>
+</html>
